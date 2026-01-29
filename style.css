@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo i {
+    font-size: 40px;
+    color: #3498db;
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.subtitle {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.header-info {
+    text-align: right;
+}
+
+.header-info p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 15px;
+}
+
+/* Основной контент */
+.content {
+    padding: 40px;
+}
+
+.intro {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-left: 5px solid #3498db;
+}
+
+.intro h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+/* Сетка заданий */
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.task-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eef2f7;
+}
+
+.task-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.task-number {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.task-header h3 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin: 0;
+}
+
+.task-icon {
+    font-size: 60px;
+    color: #3498db;
+    text-align: center;
+    margin: 20px 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-description p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.task-features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.task-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.task-features i {
+    color: #2ecc71;
+}
+
+.task-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    text-align: center;
+}
+
+.task-link:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #1c5a7a 100%);
+    transform: scale(1.05);
+}
+
+/* Технологии */
+.technologies {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.technologies h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tech-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item i {
+    font-size: 40px;
+    color: #3498db;
+}
+
+.tech-item span {
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Подвал */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer-sub {
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .subtitle {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .header-info {
+        text-align: center;
+    }
+    
+    .header-info p {
+        justify-content: center;
+    }
+    
+    .content {
+        padding: 25px 20px;
+    }
+    
+    .tasks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-card {
+        padding: 20px;
+    }
+    
+    .tech-list {
+        gap: 15px;
+    }
+    
+    .tech-item {
+        min-width: 100px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .logo h1 {
+        font-size: 26px;
+    }
+    
+    .intro {
+        padding: 20px;
+    }
+    
+    .task-header h3 {
+        font-size: 19px;
+    }
+    
+    .tech-item {
+        min-width: 80px;
+        padding: 12px;
+    }
+    
+    .tech-item i {
+        font-size: 32px;
+    }
+    
+    .tech-item span {
+        font-size: 14px;
+    }
+}
