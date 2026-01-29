@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 30px;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.nav-back {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-back h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Обертка для таблицы с прокруткой */
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+    max-height: 500px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилизация таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+}
+
+/* Заголовок таблицы - фиксированный при вертикальной прокрутке */
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Заголовки столбцов */
+th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 600;
+    border-right: 1px solid #34495e;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+}
+
+/* Первый столбец - фиксированный при горизонтальной прокрутке */
+th:first-child,
+td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: #34495e;
+}
+
+/* Ячейки первого столбца в теле таблицы */
+td:first-child {
+    background-color: #ecf0f1;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Строки таблицы */
+tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Чередование цветов строк с помощью псевдоклассов */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Эффект при наведении на строку с помощью псевдокласса */
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* Ячейки таблицы */
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Последняя строка (итого) */
+tbody tr:last-child {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+    color: white;
+}
+
+tbody tr:last-child td:first-child {
+    background-color: #1a252f;
+}
+
+/* Убрать правую границу у последнего столбца */
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+/* Контент под таблицей */
+.content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .table-wrapper {
+        max-height: 400px;
+    }
+    
+    th, td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+    
+    th, td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .table-wrapper {
+        max-height: 350px;
+    }
+}
